@@ -13,3 +13,8 @@ variable "service_account_name" {
 variable "service_account_namespace" {
   type = string
 }
+
+variable "inline_policy" {
+  type    = string
+  default = null
+}
