@@ -10,6 +10,6 @@ variable "service_account_name" {
   type = string
 }
 
-variable "service_account_namemspace" {
+variable "service_account_namespace" {
   type = string
 }
