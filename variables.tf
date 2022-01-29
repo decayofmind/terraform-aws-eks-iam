@@ -14,7 +14,12 @@ variable "service_account_namespace" {
   type = string
 }
 
-variable "inline_policy" {
+variable "iam_inline_policy" {
   type    = string
   default = null
+}
+
+variable "iam_policy_attachments" {
+  type    = list(string)
+  default = []
 }
