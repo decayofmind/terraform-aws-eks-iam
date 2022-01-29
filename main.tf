@@ -28,8 +28,8 @@ resource "aws_iam_role" "this" {
 }
 
 resource "aws_iam_role_policy_attachment" "this" {
-  count      = length(var.iam_policy_attachments)
-  policy_arn = var.iam_policy_attachments[count.index]
+  for_each   = toset(var.iam_policy_attachments)
+  policy_arn = each.key
   role       = aws_iam_role.this.id
 }
 
