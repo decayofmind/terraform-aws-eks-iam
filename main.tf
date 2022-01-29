@@ -5,7 +5,7 @@ locals {
 data "aws_caller_identity" "current" {}
 
 resource "aws_iam_role" "this" {
-  name = "eks-${var.cluster_id}-sa-${var.service_account_name}"
+  name = "eks-${var.cluster_id}-${var.service_account_namespace}-${var.service_account_name}"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
